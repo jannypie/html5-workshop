@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML5 Basic Introduction ~ Girl Develop It</title>
+
+		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+    The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+    <style type="text/css">
+      dt,dd {
+        text-align: left;
+      }
+      .reveal dt {
+        color: #92BB44;
+      }
+      .reveal dd {
+        font-size: 80%;
+      }
+      .html5-features li {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+        background-color: white;
+        display: block;
+        float: left;
+        font-size: 0.6em;
+        list-style: none;
+        margin: 1%;
+        min-height: 120px;
+        text-align: center;
+        width: 23%;
+        color: #333;
+      }
+      .html5-features li img {
+      display: block;
+      margin: 10px auto;
+      border: none;
+      width: 50px;
+      }
+      .sample-form {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .sample-form input {
+        display: block;
+        margin: 5px 20px;
+        font-size: 1em;
+      }
+    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src = "images/gdi_logo_badge.png">
+          <h3>Basic Introduction to HTML5</h3>
+        </section>
+        
+        <!-- Welcome-->
+        <section class="hide-pdf">
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Stuff to keep in mind!</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+        
+        <!-- HTML Terms Review -->
+        <section class="stack">
+          <!-- Terms -->
+          <section>
+            <h3>Review: HTML Terms</h3>
+            <dl>
+              <dt>Tag</dt>
+              <dd>
+                <p>Labels that define and separate parts of your markup into elements</p>
+                <pre><code>&lt;img /></code></pre>
+                <pre><code>&lt;h1> &lt;/h1></code></pre>
+                <pre><code>&lt;p> &lt;/p></code></pre>
+              </dd>
+              <dt>Element</dt>
+              <dd>
+                <p>A single markup object from opening to closing tags</p>
+                <pre><code>&lt;p>A paragraph.&lt;/p></code></pre>
+                <pre><code>&lt;div>Sidebar content&lt;/div></code></pre>
+              </dd>
+              <dt>Attribute</dt>
+              <dd>
+                <p>Name/value pairs within the <em>opening</em> tag that provide additional information</p>
+                <p>Examples: class=" ", id=" ", href=" ", src=" "</p>
+              </dd>
+            </dl>
+          </section>
+          <!-- Terms -->
+          <section>
+            <pre><code>
+            &lt;!-- Example of an image element with attributes -->
+            &lt;img src="logo.png" title="My Logo" alt="company logo" />
+            </code></pre>
+            <pre><code>
+            &lt;!-- Example of a div element with attributes -->
+            &lt;div id="header" class="full-width" />
+            </code></pre>
+            <dl>
+              <dt>ID</dt>
+              <dd>
+                <p>An element attribute that should always be unique to that single element and not re-used</p>
+              </dd>
+              <dt>Class</dt>
+              <dd>
+                <p>An element attribute that can take one or more values, separated by spaces; Classes can be used on any number of elements</p>
+              </dd>
+            </dl>
+          </section>
+          <!-- Terms -->
+          <section>
+            <dl>
+              <dt>Block-Level Element</dt>
+              <dd>
+                <p>An element with a rectangular shape that takes up the entire width of its parent, creating a "block"</p><p>Begins on a new line, and following elements also begin on a new line</p>
+                <p>Examples: &lt;div>, &lt;h1> &lt;/h1>, &lt;p> &lt;/p></p>
+              </dd>
+              <dt>Inline-Level Element</dt>
+              <dd>
+                <p>An element that falls "inline" with the text surrounding it, without creating new breaks in the flow</p>
+                <p>Examples: &lt;a> </a>, &lt;span> &lt;/span>, &lt;img /></p>
+              </dd>
+            </dl>
+          </section>
+        </section>
+        
+        <!-- HTML5 Intro -->
+        <section class="stack">
+          <!-- What is it -->
+          <section>
+            <h3>HTML 5: What is it?</h3>
+            <p class="left-align">HTML5 is the <a href="http://www.w3.org/TR/html5/" target="_blank" class="roll"><span data-title="W3C’s specification">W3C’s set of standards</span></a> for the next version of HTML, which had not been officially updated since HTML4 in 1999.</p>
+            <p class="fragment green left-align">What has happened in the web since the early days?</p>
+            <ul class="fragment">
+              <li>Explosion of internet use worldwide</li>
+              <li>More websites created than ever before</li>
+              <li>Websites with many different uses: e-Commerce, news, business, education, social, navigation</li>
+              <li>Creation of assistive technologies to help those with disabilities navigate the internet</li>
+              <li>"Web2.0" boom in web design and techniques</li>
+            </ul>
+          </section>
+          <!-- Context/Background -->
+          <section>
+            <p class="green left-align">What were some new challenges the web faced?</p>
+            <ul class="fragment">
+              <li>Searchability: More websites make it harder to find information</li>
+              <li>Location: Local businesses with related information should be more accessible now the internet is worldwide</li>
+              <li>Accessibility: Page readers need to make sense to the listener</li>
+              <li>Design: Design trends like headers, sidebars, footers, and more were popular, but made no code sense to the browser, being all &lt;div>s</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Specification -->
+        <section>
+          <h2>HTML5 Specification</h2>
+          <ul class="fragment">
+            <li>2004 - W3C started work</li>
+            <li>2008 - first public working draft</li>
+            <li>2011 - last call</li>
+            <li>2012 - working draft</li>
+            <li>2014 - planned for stable recommendation</li>
+          </ul>
+          <h3 class="fragment">Update! October 2014</h3>
+          <p class="fragment"><a href="http://techcrunch.com/2014/10/28/w3c-declares-html5-standard-done/">W3C Declares HTML5 Standard Complete</a></p>
+        </section>
+
+        <!-- HTML5 Components -->
+        <section class="stack">
+          <section >
+            <h3>So what's so cool about it?</h3>
+            <img src="images/html5.svg" style="width:15%" alt="">
+            <p>Too much to cover in our time together</p>
+            <p>But here are some highlights:</p>
+            <ul class="fragment">
+              <li>Gives additional markup options with more meaning</li>
+              <li>Further separates markup (content) from presentation (design)</li>
+            </ul>
+          </section>
+          <!-- Features -->
+          <section>
+            <h2>Adds a bunch of new features</h2>
+            <ul class="html5-features">
+              <li>
+                <span>semantics</span>
+                <img src="images/html5_semantics.svg" alt="">
+              </li>
+              <li>
+                <span>multimedia</span>
+                <img src="images/html5_multimedia.svg" alt="">
+              </li>
+              <li>
+                <span>3D &amp; graphics</span>
+                <img src="images/html5_effects_3d.svg" alt="">
+              </li>
+              <li>
+                <span>device access</span>
+                <img src="images/html5_device_access.svg" alt="">
+              </li>
+              <li>
+                <span>presentation</span>
+                <img src="images/html5_css3_styling.svg" alt="">
+              </li>
+              <li>
+                <span>offline &amp; storage</span>
+                <img src="images/html5_offline_storage.svg" alt="">
+              </li>
+              
+              <li>
+                <span>connectivity</span>
+                <img src="images/html5_connectivity.svg" alt="">
+              </li>
+              <li>
+                <span>performance</span>
+                <img src="images/html5_perfintegration.svg" alt="">
+              </li>
+            </ul>
+          </section>
+
+          <!-- Redefine -->
+          <section >
+            <h2>Redefines a few things</h2>
+            <p>Gives some old elements semantic meaning and separates them from presentation (e.g. b, i, strong, em)</p>
+            <pre><code>
+            &lt;b>Bolded text&lt;/b>
+            &lt;i>Italics text&lt;/i>
+            </code></pre>
+            <p>Became</p>
+            <pre><code>
+            &lt;strong>Heavier text&lt;/strong>
+            &lt;em>Emphasized text&lt;/em>
+            </code></pre>
+          </section>
+
+          <!-- Deprecated -->
+          <section >
+            <h2>Marks some old things obsolete</h2>
+            <h4>Examples</h4>
+            <ul>
+              <li>Deprecated items (e.g. frame, frameset, noframes)</li>
+              <li>Presentational elements and attributes replaced by CSS (e.g.
+               font, big, center)</li>
+            </ul>
+            <a href="http://dev.w3.org/html5/spec/single-page.html#obsolete" class="roll"><span data-title="reference">reference</span></a>
+          </section>
+        </section>  
+
+        <!-- Doctypes -->
+        <section class="stack">
+          <!-- Doctype difference -->
+          <section>
+            <h2>Old Doctypes</h2>
+            <pre><code class="xml">
+            <span class="doctype">&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+  
+            <span class="doctype">&lt;!DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Strict//EN"
+            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span>
+            </code></pre>
+            <h2>HTML5 Doctype</h2>
+            <pre><code class="xml">
+            <span class="doctype">&lt;!DOCTYPE&nbsp;html&gt;</span>
+            </code></pre>
+          </section>
+          <!-- Doctype declaration -->
+          <section>
+            <p>HTML5 Doctype also requires charset declaration</p>
+            <pre><code class="xml">
+            &lt;!doctype html>
+            &lt;html>
+              &lt;head>
+                &lt;meta charset="UTF-8">
+                &lt;title>Example document&lt;/title>
+              &lt;/head>
+              &lt;body>
+                &lt;p>Example paragraph&lt;/p>
+              &lt;/body>
+            &lt;/html>
+            </code></pre>
+            <p>
+              Minimum information required to ensure that a browser renders using
+              standards mode
+            </p>
+          </section>  
+        </section>
+
+        <!-- Define Semantic HTML -->
+        <section>
+          <h2>
+            <img src="images/html5_semantics.svg" height="50" alt="">
+            Semantic HTML
+          </h2>
+          <blockquote cite="http://en.wikipedia.org/wiki/Semantic_HTML">The use of HTML markup to reinforce the semantics, or meaning, of the information in webpages rather than merely to define its presentation (look).</blockquote>
+          <a href="http://en.wikipedia.org/wiki/Semantic_HTML" class="roll"><span data-title="-Wikipedia">-Wikipedia</span></a>
+          <p class="left-align fragment">Basic HTML examples:</p>
+            <ul class="left-align fragment">
+              <li>&lt;p> means <em>paragraph</em></li>
+              <li>&lt;h1> means <em>first-level header</em></li>
+              <li>&lt;body> means <em>the body</em> of the page</li>
+            </ul>
+        </section>
+
+        <!-- Semantics -->
+        <section class="stack">
+          <!-- Example of non-semantic markup -->
+          <section>
+            <h2>
+              <img src="images/html5_semantics.svg" height="50" alt="">
+              Semantic HTML</h2>
+            <p>What were we seeing before?</p>
+            <pre><code class="html">
+          &lt;body>
+            &lt;div id="header">
+              &lt;h1>Hi, I'm a header!&lt;/h1>
+              &lt;div id="nav">
+                &lt;ul>
+                  &lt;li>&lt;a href="foo">foo&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="bar">bar&lt;/a>&lt;/li>
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+            &lt;div id="main">
+              &lt;div class="article">foo&lt;/div>
+              &lt;div class="article">bar&lt;/div>
+            &lt;/div>
+            &lt;div id="footer">Hi, I'm a footer!&lt;/div>
+          &lt;/body>
+            </code></pre>
+            <small>Well, it's better than using tables</small>
+          </section>
+
+          <!-- Example of divitis -->
+          <section>
+            <p>But, this is</p>
+            <h2>Not very semantic</h2>
+            <pre><code class="xml"><span class="tag">&lt;<span class="title">div&nbsp;id="header"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+            <pre><code class="xml"><span class="tag">&lt;<span class="title">div&nbsp;class="nav"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+            <pre><code class="xml"><span class="tag">&lt;<span class="title">div&nbsp;id="footer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+            <p>Also known as "div-itis"</p>
+            <p class="fragment left-align">To a browser, none of these elements mean anything, or relate to any other part</p>
+            <p class="fragment left-align">W3C looked at a large number of websites to see how people were using these divs, then created new semantic elements.</p>
+          </section>
+        </section>
+
+        <!-- Semantic elements -->
+        <section class="stack">
+          <!-- New stuff -->
+          <section>
+            <h2>New Structural Elements</h2>
+            <ul class="left-align" style="float: left; width: 40%; display: block;">
+              <li>&lt;header></li>
+              <li>&lt;footer></li>
+              <li>&lt;nav></li>
+              <li>&lt;section></li>
+              <li>&lt;article></li>
+            </ul>
+            <ul class="left-align" style="float: right; width: 40%; display: block;">
+              <li>&lt;main></li>
+              <li>&lt;aside></li>
+              <li>&lt;hgroup></li>
+              <li>&lt;figure></li>
+              <li>&lt;figcaption></li>
+            </ul>
+            <p style="clear:both;"><small><a href="http://www.w3.org/TR/2012/WD-html5-diff-20121025/#new-elements">List of new elements</a></small></p>
+            <p><small><a href="http://html5doctor.com/element-index/">Another list of new elements</a></small></p>
+          </section>
+          <!-- Header -->
+          <section>
+            <h2>&lt;header&gt;</h2>
+            <ul>
+              <li>Container for a group of introductory or navigational aids</li>
+              <li>Document can have multiple header elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+            <pre><code>
+            &lt;header id="site-header">&lt;/header>
+            </code></pre>
+            <pre><code>
+            &lt;header class="article-header">&lt;/header>
+            </code></pre>
+          </section>
+          <!-- Nav -->
+          <section>
+            <h2>&lt;nav&gt;</h2>
+            <ul>
+              <li>Contains major navigational information</li>
+              <li>Usually a list of links</li>
+              <li>Often lives in the header</li>
+              <li>E.g. site navigation</li>
+            </ul>
+            <pre><code>
+            &lt;nav id="site-links">&lt;/nav>
+            </code></pre>
+          </section>
+          <!-- Main -->
+          <section>
+            <h2>&lt;main&gt;</h2>
+            <ul>
+              <li>Usually the container for the part of the website not included in the site header or footer</li>
+              <li>Should only have <strong>one</strong> &lt;main> per document</li>
+            </ul>
+            <pre><code>
+          &lt;body>
+            &lt;header>&lt;/header>
+            &lt;main>&lt;/main>
+            &lt;footer>&lt;/footer>
+          &lt;/body>
+            </code></pre>
+          </section>
+          <!-- Footer -->
+          <section>
+            <h2>&lt;footer&gt;</h2>
+            <ul>
+              <li>Contains information about its containing element</li>
+              <li>E.g. who wrote it, copyright, links to related content, etc.</li>
+              <li>Document can have multiple footer elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+            <pre><code>
+            &lt;footer id="site-footer">&lt;/footer>
+            </code></pre>
+            <pre><code>
+            &lt;footer class="article-footer">&lt;/footer>
+            </code></pre>
+          </section>
+          <!-- Section -->
+          <section>
+            <h2>&lt;section&gt;</h2>
+            <ul>
+              <li>Group together thematically related content</li>
+              <li>Similar to prior use of the div, but div has no semantic meaning</li>
+            </ul>
+            <pre><code>
+            &lt;section id="about-me">&lt;/section>
+            &lt;section id="contact-us">&lt;/section>
+            </code></pre>
+          </section>
+          <!-- Aside -->
+          <section>
+            <h2>&lt;aside&gt;</h2>
+            <ul>
+              <li>Tangentially related content</li>
+              <li>E.g. sidebar, pull quotes</li>
+            </ul>
+          </section>
+          <!-- Article -->
+          <section>
+            <h2>&lt;article&gt;</h2>
+            <ul>
+              <li>Self-contained related content</li>
+              <li>E.g. blog posts, news stories, comments, forum posts</li>
+            </ul>
+            <img src="images/html5-article-markup.jpg" alt="">
+            <p>Example article markup from nytimes.com</p>
+          </section>
+          <!-- Element flowchart -->
+          <section>
+            <h2>Which one to use?</h2>
+            <p><a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">Source: html5doctor.com</a></p>
+            <img src="images/element-flowchart.jpg" alt="">
+          </section>
+        </section>
+
+        <!-- Why be semantic -->
+        <section class="stack">
+          <section>
+            <h2>Document Outlines</h2>
+            <p class="left-align">The document outline is the structure of a document, generated by the document’s headings, form titles, table titles, and any other appropriate landmarks to map out the document.</p>
+            <p class="fragment left-align">This table of contents could then be used by assistive technology to help the user, or be parsed by a machine like a search engine to improve search results.</p>
+            <p><a href="http://html5doctor.com/outlines/">reference</a></p>
+          </section>
+          <section>
+            <h2>Semantic Markup Enhances</h2>
+            <ul>
+              <li>Accessibility</li>
+              <li>Searchability</li>
+              <li>Internationalization</li>
+              <li>Interoperability</li>
+            </ul>
+            <p class="fragment">It also helps treat the plague of div-itis!</p>
+          </section>
+        </section>
+
+        <!-- Compatibility -->
+        <section class="stack">
+          <section>
+            <h2>Let's Take a Moment</h2>
+            <p>To talk about browser compatibility</p>
+            <img src="images/browser-html5-elements.jpg" alt="">
+          </section>
+          <section>
+              <h2>HTML5Shiv</h2>
+              <a href="http://code.google.com/p/html5shiv/" class="roll"><span data-title="HTML5Shiv">HTML5Shiv</span></a>
+              <p>HTML5 IE enabling script</p>
+              <pre><code class="xml"><span class="comment">&lt;!--[if lt IE 9]&gt;
+    &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span></code></pre>
+              <blockquote>polyfill (n): a JavaScript shim that replicates the standard API for older browsers</blockquote>
+            </section>
+          </section>
+
+          <!-- FORMS -->
+          <section>
+            <!-- New types -->
+            <section>
+              <h2>HTML5 FORM Additions</h2>
+              <p class="left-align" >Forms used to be a series of &lt;input>s with maybe a &lt;textarea> and a &lt;input type="submit"></p>
+              <p class="left-align fragment" >&lt;input type=" "> now has new options</p>
+              <ul class="left-align fragment" style="float: left; width: 40%; display: block;">
+                <li>tel</li>
+                <li>search</li>
+                <li>url</li>
+                <li>email</li>
+                <li>date</li>
+              </ul>
+              <ul class="left-align fragment" style="float: right; width: 40%; display: block;">
+                <li>time</li>
+                <li>number</li>
+                <li>range</li>
+                <li>color</li>
+                <li>month</li>
+                <li>week</li>
+              </ul>
+              <p style="clear:both;"><small><a href="http://www.w3.org/TR/2012/WD-html5-diff-20121025/#new-elements">List of new elements</a></small></p>
+            </section>
+            <!-- Type features -->
+            <section>
+              <h2>new &lt;input type=""> features</h2>
+              <ul class="left-align">
+                <li>Opens up UI helper elements, such as calendars, when clicked</li>
+                <li>On mobile, number input types will bring up the number keypad</li>
+                <li>Input types are checked for validity before being submitted</li>
+                <li>Example: type="email" will only accept email address formats (word@something.somewhere)</li>
+              </ul>
+            </section>
+            <!-- Placeholders -->
+            <section>
+              <h2>HTML5 FORM Additions</h2>
+              <p class="yellow">Placeholders</p>
+              <p class="fragment">Can be placed on input or textarea elements</p>
+              <p class="fragment">Gives hint to user for data entry</p>
+              <pre class="fragment"><code>
+                &lt;input type="email" placeholder="name@email.com">
+              </code></pre>
+              <!-- <img class="fragment" src="images/placeholder.png"></img> -->
+              <form class="sample-form fragment">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="name@email.com">
+              </form>
+            </section>
+            <!-- Required -->
+            <section>
+              <h2>HTML5 FOrm Additions</h2>
+              <p class="yellow">Required</p>
+              <p class="fragment">Can be used on input, select, and textarea</p>
+              <p class="fragment">Won't let the form be submitted if not filled out!</p>
+              <pre class="fragment"><code>
+                &lt;input type="name" required>
+              </code></pre>
+            </section>
+          </section>
+
+          <section class="stack">
+            <section>
+              <h2>
+                <img src="images/html5_multimedia.svg" height="50" alt="">
+                Multimedia
+              </h2>
+              <p>Audio and video are first class citizens in HTML5</p>
+              <p class="fragment">HTML4 forced us to use embedded elements</p>
+              <pre class="fragment"><code>
+              &lt;embed src="MyVideo.mp4"/>
+              </code></pre>
+              <p class="fragment">No browser control over play/pause, sound, or anything</p>
+              <p class="fragment">Useful as a replacement for flash on mobile devices</p>
+              <p class="fragment">Flash makes mobile devices sad :(</p>
+            </section>
+
+            <section>
+              <h2>
+                <img src="images/html5_multimedia.svg" height="50" alt="">
+                Video
+              </h2>
+              <p class="yellow">The Dream</p>
+              <p>The video element was created to make it unnecessary to use plugins to display video content on your pages.</p>
+              <p>The idea is to simplify and streamline video content delivery.</p>
+              <pre><code class="xml">
+    <span class="tag">&lt;<span class="title">video</span> <span class="attribute">src</span>=<span class="value">"demo.mp4"</span> <span class="attribute">type</span>=<span class="value">"video/mp4"</span>&gt;</span>
+      Your browser does not support the video element.
+    <span class="tag">&lt;/<span class="title">video</span>&gt;</span>
+              </code></pre>
+            </section>
+
+            <section>
+              <h2>
+                <img src="images/html5_multimedia.svg" height="50" alt="">
+                Video
+              </h2>
+              <p class="yellow">The Reality</p>
+              <p>If you want to support ALL browsers and ALL video encodings, you will still need a plugin as a last-resort fall back plan.</p>
+              <p>This is because not all browsers read video the same way, and older browsers (like IE&lt;9) don't support the video element at all.</p>
+            </section>
+
+            <section class="present" style="display: block;">
+              <h2>
+                <img src="images/html5_multimedia.svg" height="50" alt="">
+                Video
+              </h2>
+              <p class="yellow">In reality it looks a bit like this</p>
+              <pre><code class="html">
+&lt;video id="video" controls preload="metadata" poster="img/poster.jpg">
+  &lt;source src="my-video.mp4" type="video/mp4">
+  &lt;source src="my-video.webm" type="video/webm">
+  &lt;source src="my-video.ogg" type="video/ogg">
+  <!-- Flash fallback -->
+  &lt;object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/my-video.mp4" width="1024">
+     &lt;img alt="my-video" src="img/my-video-poster.jpg" title="No video playback possible"/>
+  &lt;/object>
+&lt;/video>
+              </code></pre>
+            </section>
+            <section class="present" style="display: block;">
+              <h2>
+                <img src="images/html5_multimedia.svg" height="50" alt="">
+                Audio
+              </h2>
+              <pre><code class="xml">
+      <span class="tag">&lt;<span class="title">audio</span> <span class="attribute">controls</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"music.mp3"</span> <span class="attribute">type</span>=<span class="value">"audio/mpeg"</span>/&gt;</span>
+      <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"music.aac"</span> <span class="attribute">type</span>=<span class="value">"audio/mp4"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"music.ogg"</span> <span class="attribute">type</span>=<span class="value">"audio/ogg"</span>/&gt;</span>
+      <span class="comment">&lt;!-- now include flash fall back --&gt;</span>
+      <span class="tag">&lt;/<span class="title">audio</span>&gt;</span>
+              </code></pre>
+            </section>
+            
+
+          </section>
+
+          <section class="stack">
+            <section class="">
+              <h2>
+                <img src="images/html5_effects_3d.svg" height="50" alt="">
+                Canvas
+              </h2>
+              <ul>
+                <li>Environment for creating dynamic images</li>
+                <li>Canvas element + javascript = dynamic content!</li>
+                <li>Can be used with SVG (vectors) to create non-pixelating graphics</li>
+              </ul>
+            </section>
+            <section class="">
+              <h2>
+                <img src="images/html5_effects_3d.svg" height="50" alt="">
+                Canvas
+              </h2>
+              <ul>
+                <li>
+                  <a href="http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/#" target="_blank" class="roll"><span data-title="Animated Factorization">Animated Factorization</span></a>
+                </li>
+                <li>
+                  <a href="http://bomomo.com/" target="_blank" class="roll"><span data-title="http://bomomo.com/">http://bomomo.com/</span></a>
+                </li>
+                <li>
+                  <a href="http://canvasrider.com/" target="_blank" class="roll"><span data-title="http://canvasrider.com/">http://canvasrider.com/</span></a>
+                </li>
+                <li>
+                  <a href="http://lights.elliegoulding.com/" target="_blank" class="roll"><span data-title="http://lights.elliegoulding.com/">http://lights.elliegoulding.com/</span></a>
+                </li>
+                <li>
+                  <a href="http://codepen.io/jackrugile/pen/DGenc" target="_blank" class="roll"><span data-title="Codepen.io">Codepen.io</span></a>
+                </li>
+              </ul>
+            </section>
+            <section class="">
+              <h2>
+                <img src="images/html5_effects_3d.svg" height="50" alt="">
+                Canvas
+              </h2>
+              <p>The first step is to add a canvas element to your HTML. Make sure you give it an id:</p>
+              <pre><code contenteditable="">
+    &lt;canvas id="myCanvas" width="400" height="400"&gt;
+      Your browser doesn’t support Canvas.
+    &lt;/canvas&gt;
+              </code></pre>
+              <p class="fragment">Unfortunately, everything else (all the cool stuff) is actually in JavaScript and outside the scope of this class</p>
+            </section>
+          </section>
+
+          <section class="">
+            <h2>Questions?</h2>
+            <div style="font-size:1000%; height:100%; margin-top:20%" class="blue">?
+            </div>
+          </section>
+
+          <section class="">
+            <h2>Let's Develop It!</h2>
+            <p class="blue">Use HTML5 elements to markup up a sample blog post or news article.</p>
+            <ul>
+              <li>Create a full HTML5 document page with doctype, head, and body</li>
+              <li>Place the article inside a &lt;main> element in the body</li>
+              <li>Give the article a header containing a byling and date</li>
+              <li>Also give it a footer with an Author description</li>
+              <li>Include any other HTML elements you wish!</li>
+            </ul>
+            <p class="yellow">Bonus</p>
+            <p>Time permitting, also include a comment section with HTML5 comment form</p>
+          </section>
+
+			</div>
+
+
+
+  		<footer>
+        <div class="copyright">
+          Basic HTML5 ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
